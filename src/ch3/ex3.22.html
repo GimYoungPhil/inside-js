@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Example 3-22</title>
+</head>
+<body>
+<script>
+
+var twiceArr = ['미나', '사나', '모모'];
+
+twiceArr.name = 'TWICE';
+twiceArr.nameKo = '트와이스';
+twiceArr.nameJa = 'トゥワイス';
+
+twiceArr[3] = '쯔위';
+
+for (var prop in twiceArr) {
+  console.log(prop, twiceArr[prop]);
+}
+
+for (var i = 0; i < twiceArr.length; i++) {
+  console.log(i, twiceArr[i]);
+}
+
+</script>
+</body>
+</html>
