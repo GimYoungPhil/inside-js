@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Example 3-07</title>
+</head>
+<body>
+<script>
+
+// 객체 리터럴 방식의 객체 생성
+var mina = {
+  name: '미나',
+  height: 163,
+  hobby: 'Game'
+};
+
+// 객체 프로퍼티 읽기
+console.log(mina.name);
+console.log(mina['name']);
+console.log(mina.nickname);
+
+// 객체 프로퍼티 갱신
+mina.hobby = 'Shopping';
+console.log(mina.hobby);
+console.log(mina['hobby']);
+
+// 객체 프로터피 동적 생성
+mina.weight = 46;
+console.log(mina.weight);
+
+// 대괄호 표기법
+mina['full-name'] = '미나 샤론 묘이';
+console.log(mina['full-name']);
+console.log(mina.full-name);
+
+</script>
+</body>
+</html>
