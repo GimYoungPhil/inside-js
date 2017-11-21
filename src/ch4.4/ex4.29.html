@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Example 4-29</title>
+</head>
+<body>
+<script>
+
+var jeongyeon = {
+  name: '정연',
+  height: 167,
+  blood: 'O'
+};
+
+console.dir(jeongyeon);
+
+var Twice = function (name, height, blood) {
+  this.name = name;
+  this.height = height;
+  this.blood = blood;
+};
+
+var dahyun = new Twice('다현', 159, 'O');
+var momo = new Twice('모모', 162, 'A');
+
+console.dir(dahyun);
+console.dir(momo);
+
+</script>
+</body>
+</html>
