@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Example 4-19</title>
+</head>
+<body>
+<script>
+
+var self = function () {
+  console.log('a');
+
+  return function () {
+    console.log('b');
+  }
+}
+self = self();
+self();
+
+</script>
+</body>
+</html>
