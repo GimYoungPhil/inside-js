@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Example 4-41</title>
+</head>
+<body>
+<script>
+
+function Twice(name) {
+  this.name = name;
+};
+
+var momo = new Twice('모모');
+
+Twice.prototype.sayHello = function () {
+  console.log('Hello');
+};
+
+momo.sayHello();
+
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Example 4-39</title>
+</head>
+<body>
+<script>
+
+function Twice(name, height, blood) {
+  this.name = name;
+  this.height = height;
+  this.blood = blood;
+};
+
+var momo = new Twice('모모', 162, 'A');
+
+console.dir(momo.hasOwnProperty('name'));
+
+console.dir(Twice.prototype);
+
+console.dir(momo.__proto__);
+
+</script>
+</body>
+</html>

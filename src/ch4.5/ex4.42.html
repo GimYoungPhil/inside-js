@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Example 4-42</title>
+</head>
+<body>
+<script>
+
+function Twice(name) {
+  this.name = name;
+};
+
+Twice.prototype.getName = function () {
+  return this.name;
+};
+
+var momo = new Twice('모모');
+
+console.log(momo.getName());
+
+Twice.prototype.name = '트와이스';
+
+console.log(Twice.prototype.getName());
+
+</script>
+</body>
+</html>
