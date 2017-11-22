@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Example 5-09</title>
+</head>
+<body>
+<script>
+
+function HelloFunc(func) {
+  this.greeting = 'hello';
+}
+
+HelloFunc.prototype.call = function (func) {
+  func ? func(this.greeting) : this.func(this.greeting);
+};
+
+var userFunc = function(greeting) {
+  console.log(greeting);
+};
+
+var objHello = new HelloFunc();
+objHello.func = userFunc;
+objHello.call();
+
+</script>
+</body>
+</html>
