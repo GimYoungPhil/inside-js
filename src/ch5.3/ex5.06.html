@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Example 5-06</title>
+</head>
+<body>
+<script>
+
+var value = 'value1';
+
+function printValue() {
+  return value;
+}
+
+function printFunc(func) {
+  var value = 'value2';
+  console.log(printValue());
+}
+
+printFunc();
+
+</script>
+</body>
+</html>
