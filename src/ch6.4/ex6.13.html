@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Example 6-13</title>
+</head>
+<body>
+<script>
+
+function subClass() {
+  var parent = this === global ? Function : this;
+  var F = function () {};
+
+  var child = function () {
+    var _parent = child.parent;
+
+    if (_parent && _parent !== Function) {
+      _parent.apply(this, arguments);
+    }
+    if (child.prototype._init) {
+      child.prototype._init.apply(this, argument);
+    }
+  };
+
+  F.prototype = parent.prototype;
+  child.prototype = new F();
+  child.prototype.constructor = child;
+  child.parent = parent;
+  child.subClass = arguments.callee;
+
+  for (var i in obj) {
+    if (obj.hasOwnProperty(i)) {
+      child.prototype[i] = obj[i];
+    }
+  }
+
+  return child;
+}
+
+</script>
+</body>
+</html>
