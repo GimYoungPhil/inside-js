@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Example 6-08</title>
+</head>
+<body>
+<script>
+
+Function.prototype.method = function (name, func) {
+  this.prototype[name] = func;
+};
+
+function Person(name) {
+  this.name = name;
+}
+
+Person.method('setName', function (name) {
+  this.name = name;
+});
+
+Person.method('getName', function () {
+  return this.name;
+});
+
+function Twice() {
+}
+
+function F() {}
+F.prototype = Person.prototype;
+Twice.prototype = new F();
+Twice.prototype.constructor = Twice;
+Twice.super = Person.prototype;
+
+var person = new Person('트와이스');
+Twice.prototype = person;
+
+var momo = new Twice();
+momo.setName('모모');
+var sana = new Twice();
+sana.setName('사나');
+
+console.log(momo.getName());
+console.log(sana.getName());
+
+console.dir(momo);
+console.dir(sana);
+
+
+</script>
+</body>
+</html>

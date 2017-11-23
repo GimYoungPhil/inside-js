@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Example 6-06</title>
+</head>
+<body>
+<script>
+
+function create_object(o) {
+  function F() {}
+  F.prototype = o;
+  return new F();
+}
+
+function extend(obj, prop) {
+  if (!prop) {
+    prop = obj;
+    obj = this;
+  }
+
+  for (var i in prop) {
+    obj[i] = prop[i];
+  }
+
+  return obj;
+}
+
+var person = {
+  name: '아무개',
+  getName: function () {
+    return this.name;
+  },
+  setName: function (name) {
+    this.name = name;
+  }
+};
+
+var momo = create_object(person);
+var added = {
+  setAge: function (age) {
+    this.age = age;
+  },
+  getAge: function () {
+    return this.age;
+  }
+};
+
+extend(momo, added);
+momo.setName('모모');
+momo.setAge(21);
+
+console.dir(momo);
+
+var sana = create_object(person);
+extend(sana, added);
+sana.setName('사나');
+sana.setAge(20);
+
+console.dir(sana);
+
+</script>
+</body>
+</html>
