@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Example 6-10</title>
+</head>
+<body>
+<script>
+
+var Person = function (arg) {
+  var name = arg ? arg : 'anonymous';
+
+  return {
+    getName: function () {
+      return name;
+    },
+    setName: function (arg) {
+      name = arg;
+    }
+  };
+};
+
+// var someone = new Person();
+var someone = Person();
+console.log(someone.getName());
+
+someone.setName('모모');
+console.log(someone.getName());
+console.log(someone.name)
+
+</script>
+</body>
+</html>
