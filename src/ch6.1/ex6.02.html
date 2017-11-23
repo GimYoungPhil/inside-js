@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Example 6-02</title>
+</head>
+<body>
+<script>
+
+function Twice(name) {
+  this.name = name;
+}
+
+Twice.prototype.getName = function () {
+  return this.name;
+};
+
+Twice.prototype.setName = function (name) {
+  this.name = name;
+};
+
+var momo = new Twice('모모');
+var sana = new Twice('사나');
+
+console.log(momo.getName());
+console.log(sana.getName());
+
+</script>
+</body>
+</html>
